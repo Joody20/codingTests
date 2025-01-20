@@ -1,3 +1,6 @@
+"""
+실버 1 : https://www.acmicpc.net/problem/14888
+"""
 T = int(input())
 
 # T개의 숫자를 입력받음

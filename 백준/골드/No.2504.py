@@ -1,3 +1,7 @@
+"""
+백준 골드 4 : https://www.acmicpc.net/problem/2504
+"""
+
 def solution(s):
     stack = []  # 올바른괄호인지 올바르지 않은 괄호인지 판단하기 위한 스택
     num = 0 # 결과를 리턴할 숫자

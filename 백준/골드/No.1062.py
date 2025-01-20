@@ -17,7 +17,7 @@ elif K == 26: # 26개이면 모든 단어를 배울 수 있음.
     exit()
     
 answer = 0
-words = [set(input().rstrip()) for _ in range(N)]  # 단어들을 가져온다.
+words = [set(input().rstrip()) for _ in range(N)]  # 단어들을 가져온다. set은 중복 방지
 learn = [0] * 26
 
 for c in ('a' , 'n', 't', 'i', 'c'): # 이 5개의 단어는 무조건 배워야됌.
