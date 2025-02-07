@@ -27,17 +27,17 @@ while i < len(words):
     if start == -1: # 더이상 <이 없으면 종료
         res = []
 
-        for word in words[i:].split():
+        for word in words[i:].split():   # 이게 이제 <>가 없을 때 역순으로 한다는거 아니야?
             res.append(word[::-1])
 
         ans += ' '.join(res)
         break
 
-    end = words.find(">",start)
+    end = words.find(">",start)  # > 문자열 찾음.
 
-    res = []
+    res = [] # 같은 배열에 
 
-    for word in words[i:start].split():
+    for word in words[i:start].split():  # 현재 i 위치와 start 까지 split해서 
         res.append(word[::-1]) # 태그 외부 문자열은 역순으로
 
     ans += ' '.join(res)
