@@ -2,6 +2,8 @@
 백준 골드 5(문자열) : 문자열 게임 2
 https://www.acmicpc.net/problem/20437
 
+https://davincicoding.tistory.com/165 -> 도움이 됐던 블로그 !
+
 예제1 
 2
 superaquatornado
