@@ -50,7 +50,7 @@ def bfs(matrix,x,y):
                 queue.append((nx,ny))
                 visited[nx][ny] = True
                 distance[nx][ny] += distance[x][y]
-                print(distance)
+                # print(distance)
         
             if visited[nx][ny] == True and nx == N-1 and ny == M-1:
                 origin = distance[nx][ny]

@@ -12,10 +12,12 @@
 """
 import sys
 sys.stdin = open("input.txt","r")
+sys.setrecursionlimit(10**6) # 이거 안써서 recursion error 뜸....;;;;;
+input = sys.stdin.readline   # 이거 안써서 recursion error 뜸....;;;;;
 
 
 def dfs(graph, v, visited):
-    visited[v] = True
+    visited[v] = 1
     for i in graph[v]:
         if not visited[i]:
             dfs(graph, i, visited)
@@ -28,9 +30,8 @@ for i in range(M):
     graph[u].append(v)
     graph[v].append(u)
 
-
 result = 0
-visited = [False] * (N+1)
+visited = [0] * (N+1)
 
 for i in range(1, N+1):
     if not visited[i]:
