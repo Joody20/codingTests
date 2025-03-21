@@ -17,7 +17,7 @@ N , M , V = map(int,input().split())
 
 graph = [[False] * (N+1) for _ in range(N+1)]
 
-visited = [False]*(N+1)
+visited = [False] * (N+1)
 
 for _ in range(M):
     a,b = map(int,input().split())
@@ -42,7 +42,7 @@ def bfs(v):
         print(cur, end = " ")
         for n in range(1, N+1):
             if not visited[n] and graph[cur][n]:
-                visited[n] = True
+                visited[n] = True  # 여기서도 방문표시 !!!
                 queue.append(n)
                 
 
