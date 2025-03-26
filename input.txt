@@ -1,2 +1,6 @@
-01234567
-12345678
+5
+New
+Open
+Save
+Save As
+Save All
