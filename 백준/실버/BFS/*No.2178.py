@@ -29,19 +29,14 @@ grid=[list(map(int,input())) for _ in range(N)]
 
 
 def bfs(matrix,x,y):
-    queue= deque() # 방문해야 하는 queue
-
-
+    queue= deque([(0,0)]) # 방문해야 하는 queue에 시작위치를 넣어, 이 때 [(0,0)] 이런식으로 꼭 넣어줘야돼.
+ 
     visited = [[False for _ in range(M)] for _ in range(N)] # visited도 2차원 배열로 했었어야 되네....
     distance = [[1 for _ in range(M)] for _ in range(N)] # 거리를 넣어야할 2차원 배열
-
 
     # 시작 방문 노드를 0,0으로 해
     visited[0][0] = True
 
-
-    #queue에 시작 위치를 넣어
-    queue.append((0,0))
 
     dx = [0,1,0,-1]
     dy = [1, 0 , -1,0]
@@ -65,8 +60,8 @@ def bfs(matrix,x,y):
             if visited[nx][ny] == True and nx == N-1 and ny == M-1:
                 origin = distance[nx][ny]
                 distance[nx][ny] = (distance[x][y]+1) if (distance[x][y]+1) < origin else origin
-
+                
+    print(distance)
     return distance[N-1][M-1]  # 최종지점
 
-    
 print(bfs(grid,N,M))
