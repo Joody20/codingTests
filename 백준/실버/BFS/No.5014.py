@@ -41,7 +41,7 @@ def bfs(n):
             return visited[G]
             
         for i in (cur + U, cur - D):
-            if 1<=i<=F and visited[i] == -1:
+            if 1<=i<=F and visited[i] == -1:  # 이거 1보다 크거나 같다고 해줬어야 해.
                 visited[i] = visited[cur] + 1
                 queue.append(i)
     return sentence
