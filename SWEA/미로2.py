@@ -26,11 +26,12 @@ import sys
 sys.stdin = open("input.txt","r")
 
 
-
-
 def bfs(matrix, start , end):
+    N = len(matrix)
+    M = len(matrix[0])
+    
     queue = deque([start])
-    visited = [[0]*len(matrix) for _ in range(len(matrix[0]))]
+    visited = [[0]*N for _ in range(M)]
     dx = [1,-1,0,0]
     dy = [0,0,1,-1]
     
@@ -46,7 +47,7 @@ def bfs(matrix, start , end):
             nx = x + dx[i]
             ny = y + dy[i]
 
-            if 0<= nx < len(matrix) and 0<=ny<len(matrix[0]) and matrix[nx][ny] != 1 and not visited[nx][ny]:
+            if 0<= nx < N and 0<=ny<M and matrix[nx][ny] != 1 and not visited[nx][ny]:
                 queue.append((nx,ny))
 
     return 0
@@ -56,12 +57,8 @@ for _ in range(10):
     t = int(input())
     grid = [list(map(int,input())) for _ in range(100)]
 
-    # sx,sy = 0,0
-    # lx,ly = 0,0
-
     for i in range(len(grid)):
         for j in range(len(grid[0])):
-
             if grid[i][j] == 2:
                 start = i,j
             elif grid[i][j] == 3:
