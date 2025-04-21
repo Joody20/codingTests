@@ -25,7 +25,6 @@
 3
 
 """
-from collections import Counter
 import sys
 sys.stdin = open("input.txt","r")
 
