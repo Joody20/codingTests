@@ -38,7 +38,6 @@ def dfs(n, expr):
     if n == N -1:
         if evaluate(expr):
             print(expr)
-
         return
     
     for op in sorted(['+','-',' ']):

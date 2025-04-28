@@ -59,5 +59,5 @@ for i in range(n):
 print(result)
 if len(pic_counts) > 0:
     print(sorted(pic_counts, reverse=True)[0])
-else:  # 그림이 하나도 없는 경우임.
+else:  # 그림이 하나도 없는 경우임
     print(0)

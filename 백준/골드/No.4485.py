@@ -59,7 +59,7 @@ while True:
 
     grid = [list(map(int,input().split())) for _ in range(N)]
     
-    dx = [1, 1, 0, 0]
+    dx = [1, -1, 0, 0]
     dy = [0, 0, 1, -1]
 
     #최소 비용으로 정렬 해 줄 heap queue
@@ -86,9 +86,9 @@ while True:
             if 0 <= nx < N and 0<= ny < N:
                 cost = cur + grid[ny][nx]
 
-                if distance[ny][nx] > cost:
-                    distance[ny][nx] = cur + grid[ny][nx]
-                    heapq.heappush(heap,(cur + grid[ny][nx] , ny, nx))
+                if cost < distance[ny][nx]:
+                    distance[ny][nx] = cost
+                    heapq.heappush(heap,(cost , ny, nx))
 
     cnt += 1
 
