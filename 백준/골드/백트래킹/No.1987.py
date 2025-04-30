@@ -40,7 +40,6 @@ HMCHH
 10
 
 """
-from collections import deque
 import sys
 sys.stdin = open("input.txt","r")
 
