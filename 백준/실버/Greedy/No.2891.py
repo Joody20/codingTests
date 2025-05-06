@@ -44,9 +44,9 @@ onemore = set(map(int,input().split()))
 
 #하나 더 챙긴 팀의 카약이 부서질 경우 다른 팀에게 빌려줄 수 없기 때문에,
 # 이 로직을 구현했어야 했음.
-intersect = broken & onemore
-broken -= intersect
-onemore -= intersect
+intersect = broken & onemore  # 아 이거 교집합을 뜻한데, 카약이 부서진 팀과 하나더 챙겨온 팀인 거를 구하기 위해.
+broken -= intersect  # 부서진 팀 중에서 자기 여분으로 해결 가능한 팀은 더 이상 "문제 있는 팀"이 아니므로 제거
+onemore -= intersect  # 하나 더 챙겨줄 수가 없어서 빼주는거임. -> 빌려줄 수 있는 여분에서 제거
 
 for i in sorted(onemore):
     if i-1 in broken:
