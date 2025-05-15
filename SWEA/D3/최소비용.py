@@ -55,10 +55,10 @@ def bfs(N, grid):
     dx = [-1,1,0,0]
     dy = [0,0,1,-1]
     
-    dist= [[float("inf")]* N for _ in range(N)]
-    dist[0][0] = 0
+    dist= [[float("inf")] * N for _ in range(N)]  # 거리를 업데이트 해줄 배열
+    dist[0][0] = 0  #  시작점 거리 0으로 해주구!
 
-    heap = [(0,0,0)]  # 연료,x,y
+    heap = [(0,0,0)]  # 연료 , x , y
 
 
     while heap:
