@@ -26,13 +26,12 @@ A씨 차례에 남은 물건의 크기와 가격이 주어질 때, A씨가 담�
 T= int(input())
 
 for t in range(T):
-    N, M = map(int,input().split())
+    N, M = map(int,input().split())  # 박스의 크기 N, 상품의 개수 M
     lst = []
     for _ in range(M):
         lst.append(list(map(int,input().split())))
 
     dp = [0 for _ in range(N+1)]
-
 
     for size, weight in lst:
         for j in range(N, size - 1, -1):

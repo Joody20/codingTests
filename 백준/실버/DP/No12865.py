@@ -30,6 +30,7 @@ sys.stdin = open("input.txt","r")
 14
 
 """
+# Best solution
 N , K = map(int,input().split()) # N : 물건의 개수, K: 최대의 배낭 
 lst = [ list(map(int,input().split())) for _ in range(N)]
 
@@ -39,11 +40,7 @@ for w , v in lst:
     for j in range(K, w - 1, -1):
         dp[j] = max(dp[j], dp[j-w]+v)
 
-
 print(dp[K])
-
-
-
 
 
 # 방법 2
