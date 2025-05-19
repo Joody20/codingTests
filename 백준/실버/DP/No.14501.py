@@ -83,14 +83,14 @@ lst = [list(map(int,input().split())) for _ in range(N)]
 
 dp = [0 for _ in range(N+1)]
 
+# 퇴사하는 날까지 최대로 받을 수 있는 금액을 구하는거자노아
+
 for i in range(N):
     # lst[i][0] -> 상담 끝나는 시간, lst[i][1] -> 상담 시 받을 수 있는 금액
-    # print(i+lst[i][0])
-    # print(lst[i][1])
     for j in range(i+lst[i][0], N+1):
         if dp[j] < dp[i]+lst[i][1]:
             dp[j] = dp[i] + lst[i][1]
-            # print(dp[j])
+
 
 print(dp[-1])
 

@@ -47,6 +47,6 @@ villages.sort()
 acc = 0
 for x,a in villages:
     acc += a  # 누적인구 계산하는거야
-    if acc >= (total_peoples+1) // 2:  # 근데 그 누적인구수의 절반 이상이 acc이 보다 작거나 같으면,
+    if acc >= (total_peoples + 1) // 2:  # 근데 그 누적인구수의 절반 이상이 acc이 보다 작거나 같으면,
         print(x) # 그 때의 위치를 리턴하는거야. 그리고, villages를 오름차순으로 하니까, 더 작은 위치를 반환할 수 밖에 없고
         break

@@ -35,7 +35,7 @@ while i < j:
         i += 1
     elif (nums[i]+nums[j]) > x: # 더한게 x보다 크면, j를 하나씩 줄여주고
         j -= 1
-    elif (nums[i]+nums[j]) == x: # x랑 같으면, count 증가, i 증가, j증가
+    elif (nums[i]+nums[j]) == x: # x랑 같으면, count 증가, i 증가, j감소
         count += 1
         i += 1
         j -= 1
