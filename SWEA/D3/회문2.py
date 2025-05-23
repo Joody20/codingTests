@@ -26,8 +26,8 @@ for t in range(1,11):
     
     max_len = 0
 
-    for L in range(100,0,-1):
-        found = False
+    for L in range(100,0,-1):  # 100개에서부터 해줘야 맨처음 찾은게 max값ㅇ이 됨.
+        found = False  # 호ㅣ문 찾았는지
         #가로
         for i in range(100):
             for j in range(0, 100 - L + 1):  # 회문의 길이 만큼
