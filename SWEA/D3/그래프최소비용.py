@@ -66,9 +66,9 @@ for t in range(T):
     for i in range(N):
         for j in range(N):
             if i == j:
-                graph[i][j] = 0
-            elif raw_graph[i][j] != 0:
-                graph[i][j] = raw_graph[i][j]
+                graph[i][j] = 0  #대각선의 값은 0
+            elif raw_graph[i][j] != 0:  # 0이 아니면
+                graph[i][j] = raw_graph[i][j]  # 여기에 넣어줌.
 
 
     #플로이드-워셜 알고리즘 -> i에서 j로 가는 모든 경로의 최단경로의 cost를 저장해서 최댓값을 출력하고자 할 때!
@@ -77,8 +77,9 @@ for t in range(T):
         for i in range(N):
             for j in range(N):
                 if graph[i][k] + graph[k][j] < graph[i][j]:
-                    graph[i][j] = graph[i][k] + graph[k][j]
-
+                    graph[i][j] = graph[i][k] + graph[k][j]  # 더 작은 값으로 맵핑
+                    # graph[i][j] = min(graph[i][j] , graph[i][k]+ graph[k][j])  -> 이렇게도 가능
+ 
 
     # 최단거리 중 최댓값 구하기
     max_cost = 0
