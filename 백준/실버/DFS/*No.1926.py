@@ -21,6 +21,8 @@
 9
 
 """
+"""
+python 풀이
 import sys
 sys.stdin = open("input.txt","r")
 sys.setrecursionlimit(10**6) # recursion error나면 쓰도록
@@ -61,3 +63,6 @@ if len(pic_counts) > 0:
     print(sorted(pic_counts, reverse=True)[0])
 else:  # 그림이 하나도 없는 경우임
     print(0)
+
+
+"""

@@ -16,6 +16,4 @@ for (let i = 0; i < N; i++) {
   cur_sum += arr_A[i] * arr_B[i];
 }
 
-// min_sum = Math.min(min_sum, cur_sum);
-
 console.log(cur_sum);
