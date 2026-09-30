@@ -1,14 +1,13 @@
 def solution(numbers, target):
-    # 이게 지금 numbers에 있는 숫자로 target 숫자를 만들라는거잖아
-    n = [0]
     
-    for i in numbers:
-        num = []
-        for j in n:
-            num.append(i+j)
-            num.append(j-i)
-        
-        n = num
-        
-    return n.count(target)
-        
+    def dfs(cnt, cur_sum):
+        if cnt == len(numbers):
+            if cur_sum == target:
+                return 1
+            else:
+                return 0
+            
+        return dfs(cnt + 1, cur_sum + numbers[cnt]) + dfs(cnt + 1, cur_sum - numbers[cnt])
+
+
+    return dfs(0,0)
