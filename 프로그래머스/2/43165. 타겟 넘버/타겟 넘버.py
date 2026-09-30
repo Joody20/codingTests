@@ -1,5 +1,5 @@
 def solution(numbers, target):
-    
+    answer = 0
     def dfs(cnt, cur_sum):
         if cnt == len(numbers):
             if cur_sum == target:
@@ -9,5 +9,5 @@ def solution(numbers, target):
             
         return dfs(cnt + 1, cur_sum + numbers[cnt]) + dfs(cnt + 1, cur_sum - numbers[cnt])
 
-
-    return dfs(0,0)
+    answer = dfs(0,0)
+    return answer
